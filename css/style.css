@@ -1,0 +1,138 @@
+body{
+  background: #07152E;
+  color: white;
+  padding-top: 80px;
+}
+
+#home{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid gold;
+}
+
+.panel{
+  padding: 40px;
+  border: 2px solid gold;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, .05);
+  backdrop-filter: blur(10px);
+}
+
+.hero-panel{
+  text-align: center;
+}
+
+.card-header{
+  border-bottom: 1px solid gold;
+  padding: 10px;
+}
+
+.card-header p{
+  font-size: 1rem;
+}
+
+.card-body{
+  padding: 10px;
+}
+
+.card-body h1{
+  font-size: 3rem;
+}
+
+.card-body p.role{
+  font-size: 1.5rem;
+}
+
+.card-body p.level{
+  font-size: 1.1rem;
+}
+
+.profile-stats{
+  text-transform: uppercase;
+}
+
+.profile-stats ul{
+  list-style: none;
+}
+
+.card-footer{
+  border-top: 1px solid gold;
+  padding: 10px;
+}
+
+.skills-body{
+  display: flex;
+  gap: 20px;
+}
+
+.arsenal{
+  padding: 30px;
+  flex: 1;
+  border: 1px solid gold;
+  border-radius: 10px;
+}
+
+.frontend-category h3,
+.backend-category h3{
+  text-align: center;
+}
+
+.projects-body{
+  display: flex;
+  gap: 20px;
+}
+
+.project-card{
+  padding: 20px;
+  border: 1px solid gold;
+  border-radius: 10px;
+  flex: 1;
+}
+
+.project-card-header h3{
+  text-align: center;
+  border-bottom: 1px solid gold;
+  padding: 7px;
+}
+
+.project-card-body h4{
+  margin-top: 15px;
+}
+
+.project-card-footer{
+  margin-top: 20px;
+}
+
+button{
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: transparent;
+  color: white;
+  border: 2px solid gold;
+  cursor: pointer;
+}
+
+button:hover{
+  background: gold;
+  color: #000;
+}
+
+nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background: rgba(0, 0, 0, .5);
+  backdrop-filter: blur(10px);
+}
+
+nav a{
+  color: white;
+  text-decoration: none;
+}
