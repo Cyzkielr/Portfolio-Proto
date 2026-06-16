@@ -4,6 +4,27 @@ body{
   padding-top: 80px;
 }
 
+nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background: rgba(0, 0, 0, .5);
+  backdrop-filter: blur(10px);
+}
+
+nav a{
+  color: white;
+  text-decoration: none;
+}
+
+section{
+  padding: 80px 20px;
+}
+
 #home{
   min-height: 100vh;
   display: flex;
@@ -19,6 +40,8 @@ body{
   border-radius: 15px;
   background: rgba(255, 255, 255, .05);
   backdrop-filter: blur(10px);
+  max-width: 1200px;
+  margin: auto;
 }
 
 .hero-panel{
@@ -102,8 +125,26 @@ body{
   margin-top: 15px;
 }
 
+.project-card-body p{
+  line-height: 1.6;
+}
+
 .project-card-footer{
   margin-top: 20px;
+}
+
+.contact-body{
+  display: flex;
+  gap: 20px;
+}
+
+.contact-body a{
+  text-decoration: none;
+  color: white;
+}
+
+.info{
+  flex: 1;
 }
 
 button{
@@ -118,21 +159,4 @@ button{
 button:hover{
   background: gold;
   color: #000;
-}
-
-nav{
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-  background: rgba(0, 0, 0, .5);
-  backdrop-filter: blur(10px);
-}
-
-nav a{
-  color: white;
-  text-decoration: none;
 }
