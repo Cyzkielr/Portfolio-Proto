@@ -31,7 +31,6 @@ section{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 2px solid gold;
 }
 
 .panel{
@@ -46,6 +45,7 @@ section{
 
 .hero-panel{
   text-align: center;
+  max-width: 100%;
 }
 
 .card-header{
@@ -113,12 +113,19 @@ section{
   border: 1px solid gold;
   border-radius: 10px;
   flex: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px gold;
 }
 
 .project-card-header h3{
   text-align: center;
   border-bottom: 1px solid gold;
   padding: 7px;
+  font-size: 1.5rem;
 }
 
 .project-card-body h4{
@@ -130,7 +137,18 @@ section{
 }
 
 .project-card-footer{
+  text-align: center;
   margin-top: 20px;
+}
+
+.project-card-footer h4{
+  margin-bottom: 10px;
+}
+
+.project-card-footer p{
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .contact-body{
@@ -141,6 +159,11 @@ section{
 .contact-body a{
   text-decoration: none;
   color: white;
+}
+
+.contact-body a:hover{
+  color: gold;
+  text-shadow: 0 0 5px gold;
 }
 
 .info{
@@ -159,4 +182,15 @@ button{
 button:hover{
   background: gold;
   color: #000;
+}
+
+@media (max-width: 768px){
+  .skills-body,
+  .projects-body,
+  .contact-body{
+    flex-direction: column;
+  }
+  .project-card{
+    padding: 15px;
+  }
 }
