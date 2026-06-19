@@ -1,3 +1,7 @@
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   background: #07152E;
   color: white;
@@ -19,6 +23,16 @@ nav{
 nav a{
   color: white;
   text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transform: border-color 0.3 ease;
+}
+
+nav a.active{
+  color: gold;
+}
+
+nav a:hover{
+  border-color: gold;
 }
 
 section{
@@ -46,6 +60,19 @@ section{
 .hero-panel{
   text-align: center;
   max-width: 100%;
+  animation: float 2s infinite alternate;
+}
+
+@keyframes float{
+  
+  from{
+    transform: translateY(0);
+  }
+  
+  to{
+    transform: translateY(-10px);
+  }
+  
 }
 
 .card-header{
@@ -98,6 +125,11 @@ section{
   border-radius: 10px;
 }
 
+.arsenal:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 0 8px gold;
+}
+
 .frontend-category h3,
 .backend-category h3{
   text-align: center;
@@ -113,12 +145,25 @@ section{
   border: 1px solid gold;
   border-radius: 10px;
   flex: 1;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: 
+    transform 0.3s ease, 
+    box-shadow 0.3s ease;
+}
+
+.project-card h3{
+  transform:
+    color 0.3 ease,
+    text-shadow 0.3 ease;
 }
 
 .project-card:hover{
   transform: translateY(-5px);
   box-shadow: 0 0 10px gold;
+}
+
+.project-card:hover h3{
+  color: gold;
+  text-shadow: 0 0 5px gold;
 }
 
 .project-card-header h3{
@@ -193,4 +238,40 @@ button:hover{
   .project-card{
     padding: 15px;
   }
+}
+
+@keyframes pulse{
+  
+  0%{
+    opacity: 1;
+  }
+  
+  50%{
+    opacity: .5;
+  }
+  
+  100%{
+    opacity: 1;
+  }
+  
+}
+
+.stats{
+  animation: pulse 2s infinite;
+}
+
+@keyframes blink{
+  
+  from{
+    opacity: 1;
+  }
+  
+  to{
+    opacity: 0;
+  }
+  
+}
+
+.cursor{
+  animation: blink .8s infinite alternate;
 }
