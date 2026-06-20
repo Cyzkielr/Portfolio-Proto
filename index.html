@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cyzkielr's Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
   <nav>
@@ -21,9 +22,15 @@
       </div>
       <div class="card-body">
         <div class="identity">
-          <h1>Cyzkielr</h1>
+          <h1 id="welcome">
+            Initializing Chaldea Database...
+          </h1>
           <p class="role">Full Stack Apprentice</p>
           <p class="level">Level 01 Developer</p>
+          <button id="summon-btn">
+            Summon Servant
+          </button>
+          <p id="result"></p>
         </div>
         <div class="profile-stats">
           <ul>
@@ -104,7 +111,10 @@
           </div>
           <div class="project-card-footer">
             <h4>Mission Status:</h4>
-            <p><strong class="stats">Active</strong></p>
+            <p><strong class="stats" id="mission-status">Active</strong></p>
+            <button id="status-btn">
+              Complete Mission
+            </button>
           </div>
         </div>
         <div class="project-card">
