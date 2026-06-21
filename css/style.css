@@ -62,7 +62,7 @@ section{
 .hero-panel{
   text-align: center;
   max-width: 100%;
-  animation: float 2s infinite alternate;
+  animation: float 2s infinite alternate ease-in-out;
 }
 
 @keyframes float{
@@ -102,6 +102,12 @@ section{
   font-size: 1.1rem;
 }
 
+#result{
+  margin-top: 15px;
+  font-weight: bold;
+  color: gold;
+}
+
 .profile-stats{
   text-transform: uppercase;
 }
@@ -125,6 +131,10 @@ section{
   flex: 1;
   border: 1px solid gold;
   border-radius: 10px;
+  transition: 
+    transform .3s ease,
+    box-shadow .3s ease
+    ;
 }
 
 .arsenal:hover{
@@ -132,8 +142,7 @@ section{
   box-shadow: 0 0 8px gold;
 }
 
-.frontend-category h3,
-.backend-category h3{
+.arsenal h3{
   text-align: center;
 }
 
@@ -153,7 +162,7 @@ section{
 }
 
 .project-card h3{
-  transform:
+  transition:
     color 0.3 ease,
     text-shadow 0.3 ease;
 }
@@ -186,10 +195,6 @@ section{
 .project-card-footer{
   text-align: center;
   margin-top: 20px;
-}
-
-.project-card-footer h4{
-  margin-bottom: 10px;
 }
 
 .project-card-footer p{
@@ -231,17 +236,6 @@ button:hover{
   color: #000;
 }
 
-@media (max-width: 768px){
-  .skills-body,
-  .projects-body,
-  .contact-body{
-    flex-direction: column;
-  }
-  .project-card{
-    padding: 15px;
-  }
-}
-
 @keyframes pulse{
   
   0%{
@@ -260,6 +254,38 @@ button:hover{
 
 .stats{
   animation: pulse 2s infinite;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.active{
+  color: lime;
+  background: rgba(0, 255, 0, 0.1);
+}
+
+.planning{
+  color: deepskyblue;
+  background: rgba(0, 191, 255, 0.1);
+}
+
+.hiatus{
+  color: orange;
+  background: rgba(255, 165, 0, 0.1);
+}
+
+.completed{
+  color: silver;
+  background: rgba(128, 128, 128, 0.1);
+}
+
+.archived{
+  color: violet;
+  background: rgba(128, 0, 255, 0.1);
+}
+
+i{
+  margin-top: 8px;
 }
 
 @keyframes blink{
@@ -276,4 +302,15 @@ button:hover{
 
 .cursor{
   animation: blink .8s infinite alternate;
+}
+
+@media (max-width: 768px){
+  .skills-body,
+  .projects-body,
+  .contact-body{
+    flex-direction: column;
+  }
+  .project-card{
+    padding: 15px;
+  }
 }

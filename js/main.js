@@ -1,40 +1,51 @@
-const welcome = document.getElementById("welcome");
+const welcome =
+document.getElementById("welcome");
 
-welcome.innerHTML = "Welcome to Cyzkielr's Portfolio";
+const summonBtn =
+document.getElementById("summon-btn");
 
-const button = document.getElementById("status-btn");
-
-const status= document.getElementById("mission-status");
-
-button.addEventListener("click", function(){
-  status.innerHTML = "Complete";
-});
+const result =
+document.getElementById("result");
 
 const servants = [
 "Morgan",
 "Ereshkigal",
-"Ishtar",
-"King Hassan",
 "Gilgamesh",
-"Mordred",
-"Super Orion"
+"King Hassan",
+"Super Orion",
+"Ishtar",
+"Mordred"
 ];
 
-const summonBtn = document.getElementById("summon-btn");
-const result = document.getElementById("result");
 
-summonBtn.addEventListener("click", function(){
+welcome.textContent =
+"Welcome to Cyzkielr's Portfolio";
+
+
+summonBtn.addEventListener(
+
+"click",
+
+function(){
 
 const random =
+
 Math.floor(
-  
-Math.random()*
+
+Math.random()
+
+*
+
 servants.length
 
 );
 
-result.innerHTML =
 
-servants[random];
+result.textContent =
 
-});
+`★ Summoned: ${servants[random]}`;
+
+
+}
+
+);
