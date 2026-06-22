@@ -15,7 +15,7 @@ nav{
   display: flex;
   justify-content: center;
   gap: 20px;
-  padding: 20px;
+  box-sizing: border-box;
   background: rgba(0, 0, 0, .5);
   backdrop-filter: blur(10px);
 }
@@ -104,8 +104,10 @@ section{
 
 #result{
   margin-top: 15px;
+  font-size: 1.1rem;
   font-weight: bold;
   color: gold;
+  text-shadow: 0 0 5px gold;
 }
 
 .profile-stats{
@@ -118,7 +120,36 @@ section{
 
 .card-footer{
   border-top: 1px solid gold;
-  padding: 10px;
+  padding:30px;
+}
+
+a.archive-btn{
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: transparent;
+  color: white;
+  border: 2px solid gold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a.archive-btn:hover{
+  background: gold;
+  color: #000;
+}
+
+button{
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: transparent;
+  color: white;
+  border: 2px solid gold;
+  cursor: pointer;
+}
+
+button:hover{
+  background: gold;
+  color: #000;
 }
 
 .skills-body{
@@ -163,8 +194,8 @@ section{
 
 .project-card h3{
   transition:
-    color 0.3 ease,
-    text-shadow 0.3 ease;
+    color 0.3s ease,
+    text-shadow 0.3s ease;
 }
 
 .project-card:hover{
@@ -222,20 +253,6 @@ section{
   flex: 1;
 }
 
-button{
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: transparent;
-  color: white;
-  border: 2px solid gold;
-  cursor: pointer;
-}
-
-button:hover{
-  background: gold;
-  color: #000;
-}
-
 @keyframes pulse{
   
   0%{
@@ -285,7 +302,7 @@ button:hover{
 }
 
 i{
-  margin-top: 8px;
+  margin-right: 8px;
 }
 
 @keyframes blink{
