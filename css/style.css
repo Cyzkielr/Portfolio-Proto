@@ -1,10 +1,23 @@
+:root{
+    --bg-color:#07152E;
+    --text-color:white;
+    --panel-color:#0B1E45;
+    --accent-color:gold;
+    --active: lime;
+    --planning: deepskyblue;
+    --hiatus: orange;
+    --completed: silver;
+    --archived: violet;
+}
+
 html{
   scroll-behavior: smooth;
 }
 
 body{
-  background: #07152E;
-  color: white;
+  margin: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
   padding-top: 80px;
 }
 
@@ -21,7 +34,7 @@ nav{
 }
 
 nav a{
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: 
@@ -30,11 +43,11 @@ nav a{
 }
 
 nav a.active{
-  color: gold;
+  color: var(--accent-color);
 }
 
 nav a:hover{
-  border-color: gold;
+  border-color: var(--accent-color);
 }
 
 section{
@@ -51,7 +64,7 @@ section{
 
 .panel{
   padding: 40px;
-  border: 2px solid gold;
+  border: 2px solid var(--accent-color);
   border-radius: 15px;
   background: rgba(255, 255, 255, .05);
   backdrop-filter: blur(10px);
@@ -61,7 +74,7 @@ section{
 
 .hero-panel{
   text-align: center;
-  max-width: 100%;
+  width: min(100%, 900px);
   animation: float 2s infinite alternate ease-in-out;
 }
 
@@ -78,7 +91,7 @@ section{
 }
 
 .card-header{
-  border-bottom: 1px solid gold;
+  border-bottom: 1px solid var(--accent-color);
   padding: 10px;
 }
 
@@ -106,8 +119,8 @@ section{
   margin-top: 15px;
   font-size: 1.1rem;
   font-weight: bold;
-  color: gold;
-  text-shadow: 0 0 5px gold;
+  color: var(--accent-color);
+  text-shadow: 0 0 5px var(--accent-color);
 }
 
 .profile-stats{
@@ -119,7 +132,7 @@ section{
 }
 
 .card-footer{
-  border-top: 1px solid gold;
+  border-top: 1px solid var(--accent-color);
   padding:30px;
 }
 
@@ -127,14 +140,14 @@ a.archive-btn{
   margin-top: 20px;
   padding: 10px 20px;
   background: transparent;
-  color: white;
-  border: 2px solid gold;
+  color: var(--text-color);
+  border: 2px solid var(--accent-color);
   cursor: pointer;
   text-decoration: none;
 }
 
 a.archive-btn:hover{
-  background: gold;
+  background: var(--accent-color);
   color: #000;
 }
 
@@ -142,13 +155,13 @@ button{
   margin-top: 20px;
   padding: 10px 20px;
   background: transparent;
-  color: white;
-  border: 2px solid gold;
+  color: var(--text-color);
+  border: 2px solid var(--accent-color);
   cursor: pointer;
 }
 
 button:hover{
-  background: gold;
+  background: var(--accent-color);
   color: #000;
 }
 
@@ -160,7 +173,7 @@ button:hover{
 .arsenal{
   padding: 30px;
   flex: 1;
-  border: 1px solid gold;
+  border: 1px solid var(--accent-color);
   border-radius: 10px;
   transition: 
     transform .3s ease,
@@ -170,7 +183,7 @@ button:hover{
 
 .arsenal:hover{
   transform: translateY(-3px);
-  box-shadow: 0 0 8px gold;
+  box-shadow: 0 0 8px var(--accent-color);
 }
 
 .arsenal h3{
@@ -184,7 +197,7 @@ button:hover{
 
 .project-card{
   padding: 20px;
-  border: 1px solid gold;
+  border: 1px solid var(--accent-color);
   border-radius: 10px;
   flex: 1;
   transition: 
@@ -200,17 +213,17 @@ button:hover{
 
 .project-card:hover{
   transform: translateY(-5px);
-  box-shadow: 0 0 10px gold;
+  box-shadow: 0 0 10px var(--accent-color);
 }
 
 .project-card:hover h3{
-  color: gold;
-  text-shadow: 0 0 5px gold;
+  color: var(--accent-color);
+  text-shadow: 0 0 5px var(--accent-color);
 }
 
 .project-card-header h3{
   text-align: center;
-  border-bottom: 1px solid gold;
+  border-bottom: 1px solid var(--accent-color);
   padding: 7px;
   font-size: 1.5rem;
 }
@@ -241,12 +254,12 @@ button:hover{
 
 .contact-body a{
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
 }
 
 .contact-body a:hover{
-  color: gold;
-  text-shadow: 0 0 5px gold;
+  color: var(--accent-color);
+  text-shadow: 0 0 5px var(--accent-color);
 }
 
 .info{
@@ -277,27 +290,27 @@ button:hover{
 }
 
 .active{
-  color: lime;
+  color: var(--active);
   background: rgba(0, 255, 0, 0.1);
 }
 
 .planning{
-  color: deepskyblue;
+  color: var(--planning);
   background: rgba(0, 191, 255, 0.1);
 }
 
 .hiatus{
-  color: orange;
+  color: var(--hiatus);
   background: rgba(255, 165, 0, 0.1);
 }
 
 .completed{
-  color: silver;
+  color: var(--completed);
   background: rgba(128, 128, 128, 0.1);
 }
 
 .archived{
-  color: violet;
+  color: var(--archived);
   background: rgba(128, 0, 255, 0.1);
 }
 

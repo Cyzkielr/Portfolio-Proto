@@ -17,12 +17,13 @@ const servants = [
 "Mordred"
 ];
 
-
-welcome.textContent =
+if(welcome){
+  welcome.textContent =
 "Welcome to Cyzkielr's Portfolio";
+}
 
-
-summonBtn.addEventListener(
+if(summonBtn && result){
+  summonBtn.addEventListener(
 
 "click",
 
@@ -31,21 +32,25 @@ function(){
 const random =
 
 Math.floor(
-
-Math.random()
-
-*
-
-servants.length
-
+Math.random()*servants.length
 );
+
+const messages = [
+  `★ Summoned: ${servants[random]}`,
+  `Saint Graph Registered: ${servants[random]}`,
+  `Spirit Origin Confirmed: ${servants[random]}`,
+  `Servant Acquired: ${servants[random]}`
+];
 
 
 result.textContent =
 
-`★ Summoned: ${servants[random]}`;
+messages[
+  Math.floor(Math.random()*messages.length)
+];
 
 
 }
 
 );
+}
