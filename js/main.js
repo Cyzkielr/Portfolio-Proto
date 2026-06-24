@@ -7,6 +7,8 @@ document.getElementById("summon-btn");
 const result =
 document.getElementById("result");
 
+const themeBtn = document.getElementById("theme-btn");
+
 const servants = [
 "Morgan",
 "Ereshkigal",
@@ -45,8 +47,15 @@ result.textContent = messages[Math.floor(Math.random()*messages.length)];
 });
 }
 
-const themeBtn = document.getElementById("theme-btn");
-
-themeBtn.addEventListener("click", function(){
+if (themeBtn) {
+  themeBtn.addEventListener("click", function(){
   document.body.classList.toggle("mooncell");
+  
+if (document.body.classList.contains("mooncell")) {
+  themeBtn.textContent = "💻";
+}
+else {
+  themeBtn.textContent = "🌙";
+}
 });
+}
