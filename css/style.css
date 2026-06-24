@@ -334,6 +334,13 @@ i{
   animation: blink .8s infinite alternate;
 }
 
+body.mooncell{
+  --bg-color: #1A1A1A;
+  --text-color: #E0E0E0;
+  --panel-color: #2A2A2A;
+  --accent-color: #00FFFF;
+}
+
 @media (max-width: 768px){
   .skills-body,
   .projects-body,

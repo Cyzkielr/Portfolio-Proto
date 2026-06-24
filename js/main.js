@@ -41,16 +41,12 @@ const messages = [
   `Spirit Origin Confirmed: ${servants[random]}`,
   `Servant Acquired: ${servants[random]}`
 ];
-
-
-result.textContent =
-
-messages[
-  Math.floor(Math.random()*messages.length)
-];
-
-
+result.textContent = messages[Math.floor(Math.random()*messages.length)];
+});
 }
 
-);
-}
+const themeBtn = document.getElementById("theme-btn");
+
+themeBtn.addEventListener("click", function(){
+  document.body.classList.toggle("mooncell");
+});
