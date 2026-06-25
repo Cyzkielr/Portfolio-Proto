@@ -25,8 +25,7 @@ body{
 }
 
 nav{
-  position: fixed;
-  top: 0;
+  z-index: 1000;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -173,6 +172,12 @@ button{
 button:hover{
   background: var(--accent-color);
   color: #000;
+}
+
+button:focus,
+a.archive-btn:focus{
+  outline: 2px solid var(--accent-color);
+  outline-offset: 4px;
 }
 
 .skills-body{

@@ -1,6 +1,11 @@
 const welcome =
 document.getElementById("welcome");
 
+const text =
+"Initializing Chaldea Database...";
+
+let index = 0;
+
 const summonBtn =
 document.getElementById("summon-btn");
 
@@ -19,32 +24,34 @@ const servants = [
 "Mordred"
 ];
 
-if(welcome){
-  welcome.textContent =
-"Welcome to Cyzkielr's Portfolio";
-}
+const typing = setInterval(function(){
+  if (index < text.length){
+    welcome.textContent += text[index];
+    index++;
+  }
+  else {
+    clearInterval(typing);
+  }
+}, 50);
 
 if(summonBtn && result){
-  summonBtn.addEventListener(
+  summonBtn.addEventListener("click",function(){
+    const random =
+    Math.floor(Math.random()*servants.length);
 
-"click",
-
-function(){
-
-const random =
-
-Math.floor(
-Math.random()*servants.length
-);
-
-const messages = [
-  `★ Summoned: ${servants[random]}`,
-  `Saint Graph Registered: ${servants[random]}`,
-  `Spirit Origin Confirmed: ${servants[random]}`,
-  `Servant Acquired: ${servants[random]}`
-];
-result.textContent = messages[Math.floor(Math.random()*messages.length)];
+    const messages = [
+      `★ Summoned: ${servants[random]}`,
+      `Saint Graph Registered: ${servants[random]}`,
+      `Spirit Origin Confirmed: ${servants[random]}`,
+      `Servant Acquired: ${servants[random]}`
+    ];
+  result.textContent = messages[Math.floor(Math.random()*messages.length)];
 });
+}
+
+if (localStorage.getItem("theme") === "mooncell"){
+  document.body.classList.add("mooncell");
+  themeBtn.textContent = "💻";
 }
 
 if (themeBtn) {
@@ -53,9 +60,11 @@ if (themeBtn) {
   
 if (document.body.classList.contains("mooncell")) {
   themeBtn.textContent = "💻";
+  localStorage.setItem("theme", "mooncell");
 }
 else {
   themeBtn.textContent = "🌙";
+  localStorage.removeItem("theme");
 }
 });
 }
