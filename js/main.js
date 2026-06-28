@@ -76,6 +76,20 @@ function initSummon(){
   }
 }
 
+function showScrollPos(){
+  const aboutSec = document.getElementById("about");
+  
+  const skillSec = document.getElementById("skills");
+  
+  window.addEventListener("scroll", showScrollPos);
+  
+  if (window.scrollY >= aboutSec.offsetTop && 
+      window.scrollY < skillSec.offsetTop) {
+    console.log("About is Active");
+  }
+}
+
 initWelcome();
 initTheme();
 initSummon();
+showScrollPos();
