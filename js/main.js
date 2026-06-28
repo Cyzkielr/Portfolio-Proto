@@ -81,8 +81,6 @@ function showScrollPos(){
   
   const skillSec = document.getElementById("skills");
   
-  window.addEventListener("scroll", showScrollPos);
-  
   if (window.scrollY >= aboutSec.offsetTop && 
       window.scrollY < skillSec.offsetTop) {
     console.log("About is Active");
@@ -92,4 +90,4 @@ function showScrollPos(){
 initWelcome();
 initTheme();
 initSummon();
-showScrollPos();
+window.addEventListener("scroll", showScrollPos);
