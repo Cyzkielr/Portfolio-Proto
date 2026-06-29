@@ -3,7 +3,7 @@
     --text-color:white;
     --panel-color:#0B1E45;
     --accent-color:gold;
-    --active: lime;
+    --activePlan: lime;
     --planning: deepskyblue;
     --hiatus: orange;
     --completed: silver;
@@ -307,8 +307,8 @@ a.archive-btn:focus{
   font-weight: bold;
 }
 
-.active{
-  color: var(--active);
+.activePlan{
+  color: var(--activePlan);
   background: rgba(0, 255, 0, 0.1);
 }
 

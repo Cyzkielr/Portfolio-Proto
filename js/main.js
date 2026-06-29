@@ -76,14 +76,56 @@ function initSummon(){
   }
 }
 
+const homeLink = document.getElementById("homeLink");
+const aboutLink = document.getElementById("aboutLink");
+const skillLink = document.getElementById("skillLink");
+const projLink = document.getElementById("projLink");
+const contLink = document.getElementById("contLink");
+const homeSec = document.getElementById("home");
+const aboutSec = document.getElementById("about");
+const skillSec = document.getElementById("skills");
+const projSec = document.getElementById("projects");
+const contSec = document.getElementById("contact");
+
 function showScrollPos(){
-  const aboutSec = document.getElementById("about");
-  
-  const skillSec = document.getElementById("skills");
-  
-  if (window.scrollY >= aboutSec.offsetTop && 
-      window.scrollY < skillSec.offsetTop) {
-    console.log("About is Active");
+  if (window.scrollY >= homeSec.offsetTop && 
+      window.scrollY < aboutSec.offsetTop) {
+    homeLink.classList.add("active");
+    aboutLink.classList.remove("active");
+    skillLink.classList.remove("active");
+    projLink.classList.remove("active");
+    contLink.classList.remove("active");
+    }
+  else if (window.scrollY >= aboutSec.offsetTop && 
+    window.scrollY < skillSec.offsetTop) {
+    homeLink.classList.remove("active");
+    aboutLink.classList.add("active");
+    skillLink.classList.remove("active");
+    projLink.classList.remove("active");
+    contLink.classList.remove("active");
+    }
+  else if (window.scrollY >= skillSec.offsetTop && 
+    window.scrollY < projSec.offsetTop) {
+    homeLink.classList.remove("active");
+    aboutLink.classList.remove("active");
+    skillLink.classList.add("active");
+    projLink.classList.remove("active");
+    contLink.classList.remove("active");
+  }
+  else if (window.scrollY >= projSec.offsetTop && 
+    window.scrollY < contSec.offsetTop) {
+    homeLink.classList.remove("active");
+    aboutLink.classList.remove("active");
+    skillLink.classList.remove("active");
+    projLink.classList.add("active");
+    contLink.classList.remove("active");
+  }
+  else if (window.scrollY >= contSec.offsetTop) {
+    homeLink.classList.remove("active");
+    aboutLink.classList.remove("active");
+    skillLink.classList.remove("active");
+    projLink.classList.remove("active");
+    contLink.classList.add("active");
   }
 }
 
