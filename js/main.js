@@ -87,44 +87,39 @@ const skillSec = document.getElementById("skills");
 const projSec = document.getElementById("projects");
 const contSec = document.getElementById("contact");
 
+const offset = 100;
+
+function remActLink() {
+  homeLink.classList.remove("active");
+    aboutLink.classList.remove("active");
+    skillLink.classList.remove("active");
+    projLink.classList.remove("active");
+    contLink.classList.remove("active");
+}
+
 function showScrollPos(){
-  if (window.scrollY >= homeSec.offsetTop && 
-      window.scrollY < aboutSec.offsetTop) {
+  if (window.scrollY >= homeSec.offsetTop - offset && 
+      window.scrollY < aboutSec.offsetTop - offset) {
+    remActLink();
     homeLink.classList.add("active");
-    aboutLink.classList.remove("active");
-    skillLink.classList.remove("active");
-    projLink.classList.remove("active");
-    contLink.classList.remove("active");
     }
-  else if (window.scrollY >= aboutSec.offsetTop && 
-    window.scrollY < skillSec.offsetTop) {
-    homeLink.classList.remove("active");
+  else if (window.scrollY >= aboutSec.offsetTop - offset &&
+    window.scrollY < skillSec.offsetTop - offset) {
+    remActLink();
     aboutLink.classList.add("active");
-    skillLink.classList.remove("active");
-    projLink.classList.remove("active");
-    contLink.classList.remove("active");
     }
-  else if (window.scrollY >= skillSec.offsetTop && 
-    window.scrollY < projSec.offsetTop) {
-    homeLink.classList.remove("active");
-    aboutLink.classList.remove("active");
+  else if (window.scrollY >= skillSec.offsetTop - offset &&
+    window.scrollY < projSec.offsetTop - offset) {
+    remActLink();
     skillLink.classList.add("active");
-    projLink.classList.remove("active");
-    contLink.classList.remove("active");
   }
-  else if (window.scrollY >= projSec.offsetTop && 
-    window.scrollY < contSec.offsetTop) {
-    homeLink.classList.remove("active");
-    aboutLink.classList.remove("active");
-    skillLink.classList.remove("active");
+  else if (window.scrollY >= projSec.offsetTop - offset && 
+    window.scrollY < contSec.offsetTop - offset) {
+    remActLink();
     projLink.classList.add("active");
-    contLink.classList.remove("active");
   }
-  else if (window.scrollY >= contSec.offsetTop) {
-    homeLink.classList.remove("active");
-    aboutLink.classList.remove("active");
-    skillLink.classList.remove("active");
-    projLink.classList.remove("active");
+  else if (window.scrollY >= contSec.offsetTop - offset) {
+    remActLink();
     contLink.classList.add("active");
   }
 }
@@ -132,4 +127,5 @@ function showScrollPos(){
 initWelcome();
 initTheme();
 initSummon();
+showScrollPos();
 window.addEventListener("scroll", showScrollPos);
