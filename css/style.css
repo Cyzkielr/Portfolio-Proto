@@ -55,6 +55,10 @@ nav a:hover{
   border-color: var(--accent-color);
 }
 
+.leyline-activator{
+  position: relative;
+}
+
 section{
   padding: 80px 20px;
 }
