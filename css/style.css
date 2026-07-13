@@ -59,6 +59,13 @@ nav a:hover{
   position: relative;
 }
 
+.leyline-core{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 section{
   padding: 80px 20px;
 }
