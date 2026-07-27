@@ -112,10 +112,10 @@ section{
 .card-header{
   border-bottom: 1px solid var(--accent-color);
   padding: 10px;
-}
-
-.card-header p{
-  font-size: 1rem;
+  
+  p{
+    font-size: 1rem;
+  }
 }
 
 .card-body{
