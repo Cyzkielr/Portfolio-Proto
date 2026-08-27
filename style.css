@@ -58,6 +58,10 @@ nav a:hover{
   color: var(--gold);
 }
 
+nav a.active{
+  color: var(--gold);
+}
+
 #hero{
   min-height: calc(100vh - 64px);
   display: flex;
@@ -130,7 +134,7 @@ nav a:hover{
   font-size: 0.78rem;
   color: var(--text-dim);
   text-transform: uppercase;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.05em;
   margin-top: 14px;
 }
 
