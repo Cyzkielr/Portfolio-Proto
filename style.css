@@ -146,3 +146,176 @@ nav a:hover{
   margin: 4px 0 0 0;
 }
 
+#projects {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+#projects h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.6rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.project-card {
+  background: linear-gradient(160deg, var(--bg-panel), #0a0c17);
+  border: 2px solid var(--gold);
+  padding: 20px;
+  margin-bottom: 32px;
+  box-shadow: 0 0 0 1px rgba(201, 162, 39, 0.15), 0 12px 40px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 0 24px rgba(201, 162, 39, 0.35), 0 12px 40px rgba(0, 0, 0, 0.6);
+  transform: translateY(-4px);
+}
+
+.project-card .rarity {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.project-card h3 {
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.project-card .project-class {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--gold-dim);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(201, 162, 39, 0.3);
+}
+
+.project-card .description {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.project-card .tech-stack {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-card .tech-stack li {
+  font-size: 0.65rem;
+  letter-spacing: 0.04em;
+  padding: 3px 8px;
+  border: 1px solid rgba(201, 162, 39, 0.4);
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.project-card.silver {
+  border-color: var(--silver);
+}
+
+.project-card.silver .rarity,
+.project-card.silver .tech-stack li {
+  color: var(--silver);
+  border-color: rgba(154, 163, 176, 0.4);
+}
+
+.project-card.silver .project-class {
+  color: #6b7280;
+  border-bottom-color: rgba(154, 163, 176, 0.3);
+}
+
+.project-card.pending {
+  border: 2px dashed var(--text-dim);
+  background: linear-gradient(160deg, var(--bg-panel), #0a0c17);
+  opacity: 0.85;
+}
+
+.project-card.pending .rarity,
+.project-card.pending .tech-stack li {
+  color: var(--text-dim);
+  border-color: rgba(154, 149, 144, 0.4);
+}
+
+.project-card.pending .project-class {
+  color: #6b7280;
+  border-bottom-color: rgba(154, 149, 144, 0.3);
+}
+
+.project-card.pending:hover {
+  box-shadow: 0 0 16px rgba(154, 149, 144, 0.25), 0 12px 40px rgba(0, 0, 0, 0.6);
+  transform: translateY(-2px);
+}
+
+#contact {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  text-align: center;
+}
+
+#contact h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.6rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 32px;
+}
+
+.contact-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-links li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+.contact-links a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-links a:hover {
+  color: var(--text);
+}
+
+footer {
+  text-align: center;
+  padding: 32px 24px;
+  border-top: 1px solid rgba(201, 162, 39, 0.2);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+}
