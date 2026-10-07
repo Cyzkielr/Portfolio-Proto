@@ -3,250 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cyzkielr's Portfolio</title>
-  <link rel="icon" type="image/webp" href="assets/icons/FGO_Grail.webp">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
+  <link rel="stylesheet" href="style.css"/>
+  <title>CYZKIELR</title>
 </head>
 <body>
   <header>
-    <button class="leyline-activator">
-      <span class="leyline-core">⬡</span>
-      <span class="leyline-top">⬡</span>
-      <span class="leyline-left">⬡</span>
-      <span class="leyline-right">⬡</span>
-    </button>
-    <div class="menu-panel">
-      <nav>
-        <a href="#home" id="homeLink">
-          <i class="fa-solid fa-house"></i>
-          Home
-        </a>
-        <a href="#about" id="aboutLink">
-          <i class="fa-solid fa-user"></i>
-          About
-        </a>
-        <a href="#skills" id="skillLink">
-          <i class="fa-solid fa-code"></i>
-          Skills
-        </a>
-        <a href="#projects" id="projLink">
-          <i class="fa-solid fa-folder-open"></i>
-          Projects
-        </a>
-        <a href="#contact" id="contLink">
-          <i class="fa-solid fa-envelope"></i>
-          Contact
-        </a>
-        <button id="theme-btn" aria-label="Switch Theme">
-          🌙
-        </button>
-      </nav>
-    </div>
+    <nav class="navbar">
+      <a href="#home">CYZKIELR</a>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#learning_journey">Learning Journey</a>
+      <a href="#contact">Contact Me</a>
+    </nav>
   </header>
-  <section id="home">
-    <div class="hero-panel panel">
-      <div class="card-header">
-        <p>MASTER PROFILE</p>
-      </div>
-      <div class="card-body">
-        <div class="identity">
-          <h1 id="welcome">
-            
-          </h1>
-          <p class="role">Full Stack Apprentice</p>
-          <p class="level">Level 01 Developer</p>
-          <button id="summon-btn">
-            Summon Servant!
-          </button>
-          <p id="result"></p>
-        </div>
-        <div class="profile-stats">
-          <ul>
-            <li>Status: Online</li>
-            <li>Active Quest: Portfolio</li>
-          </ul>
-        </div>
-      </div>
-      <div class="card-footer">
-          <a href="#projects" class="archive-btn">
-          Enter Archive
-        </a>
-      </div>
+  <main>
+    <section id="home">
+      <h1>CYZKIELR</h1>
+      <h2>Clarence L. Feliciano</h2>
+      <h3>BSIT Student | Aspiring Full-Stack Developer</h3>
+      <p>I'm Clarence L. Feliciano, a BSIT student at the Polytechnic University of the Philippines, aspiring to become a full-stack developer and game developer. I’m a humble and curious developer who believes that there is always more to learn, improve, and create. My goal is to continuously develop my skills through hands-on projects and everyday learning.</p>
+      <a href="#projects">View Projects</a>
+      <a href="#contact">Contact Me</a>
+    </section>
+    <section id="about">
+      
+    </section>
+    <div id="skills">
+      
     </div>
-  </section>
-  <section id="about">
-    <div class="about-panel panel">
-      <div class="about-header">
-        <h2>
-          <i class="fa-solid fa-user"></i>
-          ABOUT THE MASTER
-        </h2>
-      </div>
-      <div class="about-body">
-        <p>Aspiring Full Stack Developer</p>
-        <h3>CURRENT TRAINING</h3>
-        <ul>
-          <li>Full Stack Web Development</li>
-          <li>Game Development</li>
-        </ul>
-        <h3>LONG-TERM GOAL</h3>
-        <p>Become a trusted developer capable of building websites and games.</p>
-        <h3>WHY I CODE</h3>
-        <p>I enjoy creating things and learning new skills.</p>
-      </div>
-      <div class="about-footer">
-        <p><em><q>Glory rise beyond the horizon. Challenge it because it is unreachable. Speak of conquest and demonstrate it.</q></em></p>
-      </div>
+    <div id="projects">
+      
     </div>
-  </section>
-  <section id="skills">
-    <div class="skills-panel panel">
-      <div class="skills-header">
-        <h2>
-          <i class="fa-solid fa-code"></i>
-          SKILL DATABASE
-        </h2>
-      </div>
-      <div class="skills-body">
-        <div class="frontend-category arsenal">
-          <h3>
-            <i class="fa-solid fa-laptop-code"></i>
-            FRONTEND ARSENAL
-          </h3>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-          </ul>
-        </div>
-        <div class="backend-category arsenal">
-          <h3>
-            <i class="fa-solid fa-server"></i>
-            BACKEND ARSENAL
-          </h3>
-          <ul>
-            <li>Java</li>
-            <li>PHP</li>
-          </ul>
-        </div>
-      </div>
-      <div class="skills-footer">
-        <p>LEARNING STATUS: ACTIVE</p>
-      </div>
+    <div id="education">
+      
     </div>
-  </section>
-  <section id="projects">
-    <div class="projects-panel panel">
-      <div class="project-header">
-        <h2>
-          <i class="fa-solid fa-folder-open"></i>
-          PROJECT DATABASE
-        </h2>
-      </div>
-      <div class="projects-body">
-        <div class="project-card">
-          <div class="project-card-header">
-            <h3>FGO Portfolio Website</h3>
-          </div>
-          <div class="project-card-body">
-            <h4>Description</h4>
-            <p>A Fate/Grand Order-inspired programming portfolio</p>
-            <h4>Technologies Used</h4>
-            <p>HTML, CSS, JavaScript</p>
-          </div>
-          <div class="project-card-footer">
-            <p>
-              Mission Status:
-              <span class="stats activePlan">
-                <i class="fa-solid fa-circle-check"></i>
-                Mission Active
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-card-header">
-            <h3>Students Behavioral Database(SBD)</h3>
-          </div>
-          <div class="project-card-body">
-            <h4>Description</h4>
-            <p>A website that record the students behavioral data</p>
-            <h4>Technologies Used</h4>
-            <p>HTML, CSS, JavaScript, PHP, MySQL</p>
-          </div>
-          <div class="project-card-footer">
-            <p>
-              Mission Status:
-              <span class="stats hiatus">
-                <i class="fa-solid fa-pause"></i>
-                Hiatus
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-card-header">
-            <h3>MMORPG(pending name)</h3>
-          </div>
-          <div class="project-card-body">
-            <h4>Description</h4>
-            <p>A MMORPG game that provides a immersive story that every single choice that a player make affects the whole game itself</p>
-            <h4>Technologies Used</h4>
-            <p>Pending</p>
-          </div>
-          <div class="project-card-footer">
-            <p>
-              Mission Status:
-              <span class="stats planning">
-                <i class="fa-solid fa-hourglass-start"></i>
-                Summoning Preparations
-              </span>
-            </p>
-          </div>
-        </div>
-      </div>
+    <div id="achievements">
+      
     </div>
-  </section>
-  <section id="contact">
-    <div class="contact-panel panel">
-      <div class="contact-header">
-        <h2>
-          <i class="fa-solid fa-envelope"></i>
-          COMMUNICATION TERMINAL
-        </h2>
-        <p>
-          Awaiting Transmission
-          <span class="cursor">_</span>
-        </p>
-      </div>
-      <div class="contact-body">
-        <div class="email info">
-          <p>
-            <i class="fa-solid fa-envelope"></i>
-            <a href="mailto:cyzkielr@gmail.com">cyzkielr@gmail.com</a>
-          </p>
-        </div>
-        <div class="github info">
-          <p>
-            <i class="fa-brands fa-github"></i>
-            <a href="https://github.com/Cyzkielr"
-               target="_blank"
-               rel="noopener noreferrer">Cyzkielr</a>
-          </p>
-        </div>
-        <div class="fb info">
-          <p>
-            <i class="fa-brands fa-facebook"></i>
-            <a href="https://www.facebook.com/share/1D17GQYu6Q/"
-               target="_blank"
-               rel="noopener noreferrer">Clarence Feliciano</a>
-          </p>
-        </div>  
-        </div>
-      </div>
+    <div id="learning_journey">
+      
     </div>
-  </section>
+    <div id="contact">
+      
+    </div>
+  </main>
+  <footer>
+    
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
